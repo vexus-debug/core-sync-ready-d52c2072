@@ -12,6 +12,7 @@ import {
 const industries = [
   {
     icon: Smile,
+    learnMore: "/industries/dental-clinics",
     title: "Dental Clinics",
     tagline: "Because managing teeth shouldn't give you a headache.",
     description: "You're juggling treatment plans, recall schedules, X-ray files, and billing for multi-step procedures — all while trying to keep your chairs full. Clinexus was purpose-built for the chaos of a busy dental practice.",

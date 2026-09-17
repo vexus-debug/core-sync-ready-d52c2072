@@ -18,6 +18,7 @@ import SiteIndex from "./site/pages/Index";
 import SiteIndustries from "./site/pages/Industries";
 import SiteEyeClinics from "./site/pages/EyeClinics";
 import SiteEyeClinicFeatures from "./site/pages/EyeClinicFeatures";
+import SiteDentalClinics from "./site/pages/DentalClinics";
 import SiteAbout from "./site/pages/About";
 import SiteContact from "./site/pages/Contact";
 import SitePrivacy from "./site/pages/Privacy";
@@ -181,6 +182,7 @@ const App = () => (
             <Route path="/industries" element={<SiteIndustries />} />
             <Route path="/industries/eye-clinics" element={<SiteEyeClinics />} />
             <Route path="/industries/eye-clinics/features" element={<SiteEyeClinicFeatures />} />
+            <Route path="/industries/dental-clinics" element={<SiteDentalClinics />} />
             <Route path="/about" element={<SiteAbout />} />
             <Route path="/contact" element={<SiteContact />} />
             <Route path="/privacy" element={<SitePrivacy />} />
