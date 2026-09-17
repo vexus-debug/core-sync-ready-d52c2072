@@ -557,6 +557,15 @@
   color: hsl(var(--primary-foreground));
 }
 
+.eye-theme .eye-panel-accent .text-primary,
+.eye-theme .eye-panel-accent .text-card-foreground {
+  color: hsl(var(--primary-foreground));
+}
+
+.eye-theme .eye-panel-accent .text-muted-foreground {
+  color: hsl(var(--primary-foreground) / 0.85);
+}
+
 /* ── Public site section bands ──
    Alternating surfaces so a page is never one flat colour:
    deep ink, tinted ink, and bright near-white bands. */
