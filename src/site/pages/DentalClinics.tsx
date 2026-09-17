@@ -108,12 +108,6 @@ const DentalClinics = () => {
             >
               The clinical work is solid. Is everything around it?
             </motion.h1>
-            <motion.p initial="hidden" animate="show" variants={reveal} transition={{ delay: 0.12 }} className="mx-auto mb-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              An X-ray from two visits ago nobody can find, a payment plan nobody's tracking, composite running out mid-filling because nobody saw the stock level. None of it shows up on a single day's numbers — but it's what separates a busy clinic from one that's actually growing.
-            </motion.p>
-            <motion.p initial="hidden" animate="show" variants={reveal} transition={{ delay: 0.2 }} className="mx-auto mb-10 max-w-2xl leading-relaxed text-muted-foreground/80">
-              Clinexus is a clinic management system built around how a dental practice actually runs — patient care, scheduling, clinical charting, billing, inventory and admin, in one place.
-            </motion.p>
             <motion.div initial="hidden" animate="show" variants={reveal} transition={{ delay: 0.3 }} className="flex flex-col items-center justify-center gap-4 md:flex-row">
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 font-bold text-primary-foreground transition-colors hover:bg-foreground">
                 <MessageCircle className="h-5 w-5" /> Talk to us on WhatsApp
