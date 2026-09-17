@@ -182,6 +182,7 @@ const App = () => (
             <Route path="/industries" element={<SiteIndustries />} />
             <Route path="/industries/eye-clinics" element={<SiteEyeClinics />} />
             <Route path="/industries/eye-clinics/features" element={<SiteEyeClinicFeatures />} />
+            <Route path="/industries/dental-clinics" element={<SiteDentalClinics />} />
             <Route path="/about" element={<SiteAbout />} />
             <Route path="/contact" element={<SiteContact />} />
             <Route path="/privacy" element={<SitePrivacy />} />
