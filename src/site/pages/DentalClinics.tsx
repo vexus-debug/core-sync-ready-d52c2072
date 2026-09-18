@@ -130,9 +130,9 @@ const DentalClinics = () => {
               <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 font-bold text-primary-foreground transition-colors hover:bg-foreground">
                 <MessageCircle className="h-5 w-5" /> Talk to us on WhatsApp
               </a>
-              <a href="#features" className="inline-flex items-center gap-2 rounded-full border border-primary px-10 py-4 font-bold text-primary transition-colors hover:bg-primary/10">
+              <Link to="/industries/dental-clinics/features" className="inline-flex items-center gap-2 rounded-full border border-primary px-10 py-4 font-bold text-primary transition-colors hover:bg-primary/10">
                 See the full feature list <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </motion.div>
             <motion.p initial="hidden" whileInView="show" viewport={viewport} variants={reveal} className="mx-auto mt-12 max-w-3xl border-t border-primary/20 pt-8 text-sm leading-relaxed text-muted-foreground">
               Clinexus is built working directly with dental clinics running real patient loads — the workflow below was shaped by what those clinics actually needed, not designed in the abstract and hoped to fit.
