@@ -14,6 +14,12 @@ import {
   Users,
   Wallet,
 } from "lucide-react";
+import shotPatients from "@/assets/dental-sales/patients.png";
+import shotAppointments from "@/assets/dental-sales/appointments.png";
+import shotCharts from "@/assets/dental-sales/dental-charts.png";
+import shotBilling from "@/assets/dental-sales/billing.png";
+import shotInventory from "@/assets/dental-sales/inventory.png";
+import shotDashboard from "@/assets/dental-sales/dashboard.png";
 
 const WHATSAPP = "https://wa.me/2349017758165";
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -21,14 +27,26 @@ const viewport = { once: true, margin: "-70px" };
 const reveal = { hidden: { opacity: 0, y: 34 }, show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } } };
 const slide = (dir: "left" | "right" | "up") => ({ hidden: { opacity: 0, x: dir === "left" ? -70 : dir === "right" ? 70 : 0, y: dir === "up" ? 60 : 0 }, show: { opacity: 1, x: 0, y: 0, transition: { duration: 0.8, ease: EASE } } });
 
+const Screenshot = ({ src, alt }: { src: string; alt: string }) => (
+  <div className="mb-6 overflow-hidden rounded-2xl border border-primary/15 bg-background shadow-xl shadow-primary/10">
+    <div className="flex items-center gap-1.5 border-b border-primary/10 bg-muted/40 px-3 py-2">
+      <span className="h-2 w-2 rounded-full bg-primary/25" />
+      <span className="h-2 w-2 rounded-full bg-primary/25" />
+      <span className="h-2 w-2 rounded-full bg-primary/25" />
+    </div>
+    <img src={src} alt={alt} loading="lazy" className="block w-full" />
+  </div>
+);
+
 const modules = [
-  { icon: ClipboardList, name: "Patient records", benefit: "One record instead of five folders per patient.", body: "Every treatment plan, prescription, visit, X-ray and note lives against the same patient — no digging through paper or a separate imaging folder. Personal details, emergency contact, medical history, allergies and alerts stay visible at the top of the profile." },
-  { icon: CalendarClock, name: "Scheduling", benefit: "Scheduling that doesn't collide.", body: "Book by patient, clinician, treatment and chair without double-booking a chair or a clinician who's off that day. Day, week and month views, a live chair-availability grid, a walk-in queue and waiting list keep the whole day moving." },
-  { icon: Smile, name: "Dental charting", benefit: "Clinical charting built around dentistry.", body: "Chart tooth-by-tooth — not in a paragraph someone has to re-read to work out what was actually done. Treatment planning, prescriptions and consent forms stay tied to the same patient record rather than kept separately." },
-  { icon: Wallet, name: "Billing & profitability", benefit: "Billing that doesn't leak revenue.", body: "Know what's owed, what's on a payment plan and what each treatment actually costs to deliver. Invoicing, estimates, expenses, staff commissions, revenue allocation and profitability reporting stay connected by treatment and clinician." },
-  { icon: Boxes, name: "Inventory", benefit: "Materials that don't run out mid-procedure.", body: "Know your stock levels before a filling starts, not while it's underway. Inventory, cost and valuation tracking, treatment materials, suppliers and purchase orders show what is available and what needs attention." },
-  { icon: ShieldCheck, name: "Oversight & access", benefit: "The right people seeing the right things.", body: "A dashboard brings together patient count, today's completion rate, pending payments, monthly revenue, today's schedule and live activity. Role-based access keeps finance, staff and audit screens with the people who need them." },
+  { icon: ClipboardList, name: "Patient records", shot: shotPatients, shotAlt: "Patient list with contact details, visit history and status", benefit: "One record instead of five folders per patient.", body: "Every treatment plan, prescription, visit, X-ray and note lives against the same patient — no digging through paper or a separate imaging folder. Personal details, emergency contact, medical history, allergies and alerts stay visible at the top of the profile." },
+  { icon: CalendarClock, name: "Scheduling", shot: shotAppointments, shotAlt: "Monthly appointment calendar showing booked patients per day", benefit: "Scheduling that doesn't collide.", body: "Book by patient, clinician, treatment and chair without double-booking a chair or a clinician who's off that day. Day, week and month views, a live chair-availability grid, a walk-in queue and waiting list keep the whole day moving." },
+  { icon: Smile, name: "Dental charting", shot: shotCharts, shotAlt: "Interactive adult tooth chart with per-tooth condition colours", benefit: "Clinical charting built around dentistry.", body: "Chart tooth-by-tooth — not in a paragraph someone has to re-read to work out what was actually done. Treatment planning, prescriptions and consent forms stay tied to the same patient record rather than kept separately." },
+  { icon: Wallet, name: "Billing & profitability", shot: shotBilling, shotAlt: "Billing screen with invoices, amounts owed and payment status", benefit: "Billing that doesn't leak revenue.", body: "Know what's owed, what's on a payment plan and what each treatment actually costs to deliver. Invoicing, estimates, expenses, staff commissions, revenue allocation and profitability reporting stay connected by treatment and clinician." },
+  { icon: Boxes, name: "Inventory", shot: shotInventory, shotAlt: "Inventory list showing stock levels and low-stock alerts", benefit: "Materials that don't run out mid-procedure.", body: "Know your stock levels before a filling starts, not while it's underway. Inventory, cost and valuation tracking, treatment materials, suppliers and purchase orders show what is available and what needs attention." },
+  { icon: ShieldCheck, name: "Oversight & access", shot: shotDashboard, shotAlt: "Clinic dashboard with patient count, revenue and today's schedule", benefit: "The right people seeing the right things.", body: "A dashboard brings together patient count, today's completion rate, pending payments, monthly revenue, today's schedule and live activity. Role-based access keeps finance, staff and audit screens with the people who need them." },
 ];
+
 
 const included = ["Full patient records, SOAP notes and tooth-tagged imaging", "Scheduling with chair and clinician conflict prevention", "Dental charting, treatment planning and consent forms", "Billing, payment plans, commissions and profitability reporting", "Inventory linked to treatments, suppliers and purchase orders", "Reports, analytics and role-based access control"];
 const roles = ["Owner", "Admin", "Dentist", "Receptionist", "Hygienist", "Assistant", "Accountant", "Lab technician", "Lab assistant"];
