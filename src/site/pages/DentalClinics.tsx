@@ -160,9 +160,6 @@ const DentalClinics = () => {
                 </motion.article>
               ))}
             </div>
-
-              ))}
-            </div>
           </section>
 
           <motion.h2 initial="hidden" whileInView="show" viewport={viewport} variants={reveal} className="mb-4 text-2xl font-bold text-foreground md:text-3xl">
