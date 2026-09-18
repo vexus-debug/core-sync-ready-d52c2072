@@ -146,9 +146,10 @@ const DentalClinics = () => {
             <motion.p initial="hidden" whileInView="show" viewport={viewport} variants={reveal} className="mb-10 max-w-2xl text-muted-foreground">
               Patient care, scheduling, clinical records, money and stock move through one connected system instead of separate folders and conversations.
             </motion.p>
-            <div className="mb-24 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mb-24 grid gap-6 md:grid-cols-2">
               {modules.map((item, i) => (
-                <motion.article key={item.name} initial="hidden" whileInView="show" viewport={viewport} variants={slide(i % 3 === 0 ? "left" : i % 3 === 2 ? "right" : "up")} whileHover={{ y: -5 }} className="eye-panel flex flex-col rounded-3xl p-7">
+                <motion.article key={item.name} initial="hidden" whileInView="show" viewport={viewport} variants={slide(i % 2 === 0 ? "left" : "right")} whileHover={{ y: -5 }} className="eye-panel flex flex-col rounded-3xl p-7">
+                  <Screenshot src={item.shot} alt={item.shotAlt} />
                   <div className="mb-5 flex items-center justify-between">
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10"><item.icon className="h-5 w-5 text-primary" /></div>
                     <span className="font-display text-3xl font-bold text-primary/25">{String(i + 1).padStart(2, "0")}</span>
@@ -157,6 +158,9 @@ const DentalClinics = () => {
                   <p className="mb-3 font-medium text-primary">{item.benefit}</p>
                   <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
                 </motion.article>
+              ))}
+            </div>
+
               ))}
             </div>
           </section>
